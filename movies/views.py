@@ -4,14 +4,17 @@ from .models import Movie
 
 
 def home(request):
-    search_term = request.GET.get("q")
     movies = Movie.objects.all()
-    return render(request, "home.html", {"searchTerm": search_term, "movies": movies})
+    return render(request, 'home.html', {'movies': movies})
 
 
 def about(request):
-    return render(request, "about.html")
+    return render(request, 'about.html')
 
 
 def register(request):
     return HttpResponse("<h1>Welcome to Register Page</h1>")
+
+
+def login(request):
+    return HttpResponse("<h1>Welcome to Login Page</h1>")

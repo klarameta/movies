@@ -13,8 +13,8 @@ def about(request):
 
 
 def register(request):
-    return HttpResponse("<h1>Welcome to Register Page</h1>")
+    return render(request, 'register.html')
 
 
 def login(request):
-    return HttpResponse("<h1>Welcome to Login Page</h1>")
+    return render(request, 'login.html')

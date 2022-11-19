@@ -22,8 +22,8 @@ from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", movieMania.home),
-    path("about/", movieMania.about),
+    path("", movieMania.home, name="home"),
+    path("about/", movieMania.about, name="about"),
     path("register/", movieMania.register, name="register"),
     path("login/", movieMania.login, name="login"),
 
